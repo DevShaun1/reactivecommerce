@@ -77,7 +77,7 @@ export const Category = styled.span`
 export const Button = styled.button.attrs((props) => props)`
   border: none;
   background-color: ${({ variant }) =>
-    variant == "remove" ? "#d10e0e" : "#1c8644"};
+    variant === "remove" ? "#d10e0e" : "#1c8644"};
   color: #fff;
   padding: 10px 20px;
   border-radius: 20px;

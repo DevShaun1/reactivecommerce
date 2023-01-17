@@ -14,7 +14,7 @@ const ProductList = () => {
     if (productListStatus === "idle") {
       dispatch(fetchProducts())
     }
-  }, [dispatch])
+  }, [dispatch, productListStatus])
 
   const addProductToCart = (product) => {
     dispatch(addToCart(product))
@@ -34,7 +34,7 @@ const ProductList = () => {
 
   let content = ""
 
-  if (productListStatus == "loading")
+  if (productListStatus === "loading")
     content = <StatusContainer>Loading...</StatusContainer>
   else if (productListStatus === "succeeded") {
     content = productList.map((product) => (

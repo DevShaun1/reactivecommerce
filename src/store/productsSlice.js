@@ -22,7 +22,7 @@ export const productsSlice = createSlice({
   reducers: {
     toggleIsProductInCart: (state, action) => {
       const product = state.items.find((item) => action.payload === item.id)
-      product.isInCart = !product.isInCart
+      product.isInCart == !product.isInCart
     },
   },
   extraReducers: (builder) => {
